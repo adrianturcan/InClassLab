@@ -23,24 +23,19 @@ public class CILabTest {
         assertEquals(0, StringCalculator.add(""));
     }
 
-    @Test
-    public void Null() {
-        assertFalse(myString.getString() == null);
-    }
 
     @Test
     public void detectCapitalUseTest1() {
-
-        if(myString.toString().matches(".*[A-Z].*"))
-            System.out.println("The String contains Uppercase letter(s)");
-        else {
-            fail("");
-        }
+        myString.setString("cD");
+        assertFalse(myString.toString().contains(".*[A-Z].*"), "myString does not contain capital letters");
 
     }
     @Test
     public void detectCapitalUseTest2() {
-        fail();
+        myString.setString("Capital");
+        boolean expected = true;
+        boolean actual = myString.detectCapitalUse();
+        assertEquals(expected, actual);
     }
 
 

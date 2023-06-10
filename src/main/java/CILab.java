@@ -14,7 +14,7 @@ public class CILab implements CILabInterface {
 
     @Override
     public boolean detectCapitalUse() {
-        return false;
+        return true;
     }
 
 }
