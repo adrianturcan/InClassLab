@@ -29,6 +29,8 @@ public class CILabTest {
         myString.setString("cD");
         assertFalse(myString.toString().contains(".*[A-Z].*"), "myString does not contain capital letters");
 
+        myString.setString("Testing");
+        assertTrue(myString.detectCapitalUse(), "It is expected true");
     }
     @Test
     public void detectCapitalUseTest2() {

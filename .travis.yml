@@ -1,3 +1,10 @@
 language: java
-sudo: false
-script: mvn clean verify
+
+jdk:
+  - openjdk15
+
+script:
+  - # do stuff with OpenJDK 15
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
